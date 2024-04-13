@@ -10,6 +10,7 @@ import Top from "./components/layout/Top/Top";
 import Inquire from "./components/layout/Inquire/Inquire";
 
 const Home = () => {
+  const topRef = useRef(null);
   const outlineRef = useRef(null);
   const profileRef = useRef(null);
 
@@ -17,8 +18,8 @@ const Home = () => {
     <div>
       <Anchor />
       <div className="my-10 flex flex-col items-center gap-20">
-        <Top />
-        <Outline />
+        <Top topRef={topRef}/>
+        <Outline outlineRef={outlineRef}/>
         <Profile />
         <Research />
         <Activity />
