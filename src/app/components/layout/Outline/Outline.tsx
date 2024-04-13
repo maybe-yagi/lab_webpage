@@ -1,7 +1,7 @@
 const Outline = () => {
 	return (
 		<div>
-			<h1>トップメニュー</h1>
+			<h1>研究室概要</h1>
 		</div>
 	)
 }
