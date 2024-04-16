@@ -3,7 +3,7 @@ import { OutlineProps } from "@/types/Outline.types";
 const Outline:React.FC<OutlineProps> = ({outlineRef}:OutlineProps) => {
 	return (
 		// 研究室紹介のカード
-		<div id="outline" className="flex w-6/12 flex-col gap-2" ref={outlineRef}>
+		<div id="outline" className="flex w-5/12 flex-col gap-2" ref={outlineRef}>
 			<div className="text-2xl w-fit border-b-2">
 				<h2>About us</h2>
 			</div>

@@ -3,7 +3,7 @@ import { ProfileProps } from "@/types/Profile.types";
 
 const Profile:React.FC<ProfileProps> = ({profileRef}:ProfileProps) => {
   return(
-    <div id="profile" className="my-5 flex w-6/12 flex-col gap-2 items-center" ref={profileRef}>
+    <div id="profile" className="my-5 flex w-5/12 flex-col gap-2 items-center" ref={profileRef}>
       <div className="flex flex-nowrap">
         <div className="mr-5">
           <Image alt="profile photo" src="/images/jeong.png" width={200} height={200} className="rounded-full"/>

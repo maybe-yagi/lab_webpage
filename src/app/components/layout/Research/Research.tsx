@@ -8,7 +8,7 @@ import ResearchCard from "@/app/components/elements/ResearchCard/ResearchCard";
 
 const Research:React.FC<ResearchProps> = ({researchRef}: ResearchProps) => {
   return (
-    <div id="research" className="flex w-6/12 flex-col gap-2" ref={researchRef}>
+    <div id="research" className="flex w-5/12 flex-col gap-2" ref={researchRef}>
       <div className="text-2xl w-fit border-b-2">
         <h2>Research</h2>
       </div>

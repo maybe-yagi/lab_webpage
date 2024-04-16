@@ -21,9 +21,9 @@ const Home = () => {
   const inquireRef = useRef(null);
 
   return (
-    <div>
+    <div className="bg-slate-900 text-gray-200">
       <Anchor />
-      <div className="my-10 flex flex-col items-center gap-20">
+      <div className="flex flex-col items-center gap-20">
         <Top topRef={topRef}/>
         <Outline outlineRef={outlineRef}/>
         <Profile profileRef={profileRef}/>
