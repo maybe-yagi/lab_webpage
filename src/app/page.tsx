@@ -10,7 +10,7 @@ const Research = dynamic(() => import("./components/layout/Research/Research"), 
 });
 import Activity from "./components/layout/Activity/Activity";
 import Top from "./components/layout/Top/Top";
-import Inquire from "./components/layout/Inquire/Inquire";
+import Contact from "./components/layout/Contact/Contact";
 
 const Home = () => {
   const topRef = useRef(null);
@@ -18,10 +18,10 @@ const Home = () => {
   const profileRef = useRef(null);
   const researchRef = useRef(null);
   const activityRef = useRef(null);
-  const inquireRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
-    <div className="bg-slate-900 text-gray-200">
+    <div className="bg-slate-900 text-gray-200 p-10">
       <Anchor />
       <div className="flex flex-col items-center gap-20">
         <Top topRef={topRef}/>
@@ -29,7 +29,7 @@ const Home = () => {
         <Profile profileRef={profileRef}/>
         <Research researchRef={researchRef}/>
         <Activity activityRef={activityRef}/>
-        <Inquire inquireRef={inquireRef}/>
+        <Contact contactRef={contactRef}/>
       </div>
     </div>
   );
