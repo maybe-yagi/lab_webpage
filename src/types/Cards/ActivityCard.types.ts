@@ -1,7 +1,6 @@
-export interface ActivityProps {
+export interface ActivityCardProps {
   src: string,
   title: string,
   description: string,
-  pos: string,
-  pos_y: string,
+  pos_photo?: "upside" | "downside",
 }
