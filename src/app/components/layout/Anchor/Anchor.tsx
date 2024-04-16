@@ -3,7 +3,10 @@ import { AnchorProps } from "@/types/Anchor.types";
 const Anchor: React.FC<AnchorProps> = ({
   topRef,
   outlineRef,
-  profileRef
+  profileRef,
+  researchRef,
+  activityRef,
+  inquireRef,
 }: AnchorProps) => {
   return (
     <div>
@@ -13,6 +16,18 @@ const Anchor: React.FC<AnchorProps> = ({
         </a>
         <a href="#outline" className="flex item-center">
           <span>outline</span>
+        </a>
+        <a href="#profile" className="flex item-center">
+          <span>profile</span>
+        </a>
+        <a href="#research" className="flex item-center">
+          <span>research</span>
+        </a>
+        <a href="#activity" className="flex item-center">
+          <span>activity</span>
+        </a>
+        <a href="#inquire" className="flex item-center">
+          <span>inquire</span>
         </a>
       </div>
     </div>
