@@ -26,8 +26,8 @@ const Anchor: React.FC<AnchorProps> = ({
         <a href="#activity" className="flex item-center">
           <span>activity</span>
         </a>
-        <a href="#inquire" className="flex item-center">
-          <span>inquire</span>
+        <a href="#contact" className="flex item-center">
+          <span>contact</span>
         </a>
       </div>
     </div>
