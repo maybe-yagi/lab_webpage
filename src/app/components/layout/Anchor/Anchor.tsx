@@ -10,7 +10,7 @@ const Anchor: React.FC<AnchorProps> = ({
 }: AnchorProps) => {
   return (
     <div>
-      <div className="fixed left-10 -z-10 my-40 flex flex-col gap-10 text-2xl font-thin text-gray-200 lg:z-10">
+      <div className="fixed left-10 -z-10 my-40 flex flex-col gap-10 text-2xl font-bold text-fuchsia-400 lg:z-10">
         <a href="#top" className="flex item-center">
           <span>top</span>
         </a>
