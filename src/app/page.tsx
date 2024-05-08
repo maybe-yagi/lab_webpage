@@ -32,7 +32,7 @@ const Home = () => {
         <Activity activityRef={activityRef}/>
         <Contact contactRef={contactRef}/>
       </div>
-      <Image src='/images/noumiso_sukesuke.png' width={100} height={100} className="absolute right-0 buttom-10"/>
+      <Image src='/images/noumiso_sukesuke.png' width={100} height={100} className="absolute right-0 buttom-10" alt=""/>
     </div>
   );
 }
