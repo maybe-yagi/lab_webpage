@@ -2,11 +2,28 @@
 
 import { ContactProps } from "@/types/Contact.tytpes";
 import { useState } from "react";
+import MyButton from "../../elements/Button/Button";
+import { motion, Variants } from "framer-motion";
 
 const Contact:React.FC<ContactProps> = ({contactRef}: ContactProps) => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+
+	const cardVariants: Variants = {
+		offscreen: {
+			y: 300
+		},
+		onscreen: {
+			y: 0,
+			rotate: 0,
+			transition: {
+				type: "spring",
+				bounce: 0.4,
+				duration: 0.8
+			}
+		}
+	};
 
 	const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -37,8 +54,12 @@ const Contact:React.FC<ContactProps> = ({contactRef}: ContactProps) => {
 
 
   return (
-    <div id="contact" className="flex w-5/12 flex-col gap-2" ref={contactRef}>
-			<div className="card">
+    <motion.div id="contact" className="flex w-5/12 flex-col gap-2" ref={contactRef}
+			initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+		>
+			<motion.div className="card" variants={cardVariants}>
 				<div className="text-2xl w-fit border-b-2 border-fuchsia-400 mb-4">
 					<h2>Contact</h2>
 				</div>
@@ -51,12 +72,12 @@ const Contact:React.FC<ContactProps> = ({contactRef}: ContactProps) => {
 							<input className="w-4/5 rounded" type="email" placeholder="メールアドレス" value={email} onChange={e => setEmail(e.target.value)} required/>
 							<h2 className="left-0 w-4/5">お問い合わせ内容</h2>
 							<textarea className="w-4/5 rounded h-32" placeholder="内容" value={message} onChange={e => setMessage(e.target.value)} required/>
-							<button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" type="submit">送信</button>
+							<MyButton type="submit">送信</MyButton>
 						</div>
 					</form>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
   )
 }
 

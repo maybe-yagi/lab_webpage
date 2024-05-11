@@ -40,6 +40,7 @@ body {
   border-radius: 16px;
   background-color: rgba(231, 229, 229, 0.6);
   /* background-color: rgba(12, 12, 12, 0.6); */
+  animation: slideinLeft 3s infinite;
 }
 
 h2 {
