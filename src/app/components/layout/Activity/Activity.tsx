@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { cardVariants } from "../../common/Animation";
 
 const Activity:React.FC<ActivityProps> = ({activityRef}:ActivityProps) => {
-  const left_card = {
+  const kusyami = {
     src: "/images/research_images/car.jpg",
-    title: "a",
-    description: "a",
+    title: "くしゃみとまらん",
+    description: "くしゃみとまらん助けてくれ",
   }
 
   const startUp = {
@@ -36,7 +36,7 @@ const Activity:React.FC<ActivityProps> = ({activityRef}:ActivityProps) => {
           <h2>Other Activities</h2>
         </div>
         <div>
-          <ActivitiesCard ActivityCard_left={left_card} ActivityCard_right={startUp}/>
+          <ActivitiesCard ActivityCard_left={kusyami} ActivityCard_right={startUp}/>
         </div>
         <div className="flex justify-center mt-4">
           <MyButton onClick={handleClick}>view more</MyButton>

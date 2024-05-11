@@ -24,6 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  --pink: #eb23c9;
 }
 
 @layer utilities {
@@ -49,4 +50,18 @@ h2 {
 
 p {
   color: rgb(180, 99, 163);
+}
+
+.triangle {
+  stroke: var(--pink);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--pink);
+  transform-origin: 0%;
 }
