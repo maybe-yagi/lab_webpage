@@ -9,6 +9,10 @@ const Profile:React.FC<ProfileProps> = ({profileRef}:ProfileProps) => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
+      whileHover={{ 
+        scale: 1.1,
+        transition: {duration:0.5}
+       }}
     >
       <motion.div className="card w-full" variants={cardVariants}>
         <div className="flex flex-nowrap items-center">

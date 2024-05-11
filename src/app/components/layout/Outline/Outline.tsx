@@ -16,6 +16,10 @@ const Outline:React.FC<OutlineProps> = ({outlineRef}:OutlineProps) => {
 			initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
+			whileHover={{ 
+        scale: 1.1,
+        transition: {duration:0.5}
+       }}
 		>
 			<motion.div className="card" variants={cardVariants}>
 				<div className="text-2xl w-fit border-b-2 border-fuchsia-400 mb-4">

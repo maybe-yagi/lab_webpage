@@ -2,7 +2,6 @@
 
 import { AnchorProps } from "@/types/Anchor.types";
 import { motion, useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const Anchor: React.FC<AnchorProps> = ({
   topRef,
@@ -12,18 +11,17 @@ const Anchor: React.FC<AnchorProps> = ({
   activityRef,
   inquireRef,
 }: AnchorProps) => {
-  const { scrollYProgress } = useScroll();
   const { scrollYProgress: topScrollYProgress } = useScroll({
     target: topRef,
     offset: ['start', 'start'],
   })
   const { scrollYProgress: outlineScrollYProgress } = useScroll({
     target: outlineRef,
-    offset: ['end end', 'start center'],
+    offset: ['end end', 'end center'],
   })
   const { scrollYProgress: profileScrollYProgress } = useScroll({
     target: profileRef,
-    offset: ['start end', 'end center'],
+    offset: ['start center', 'end center'],
   })
   const { scrollYProgress: researchScrollYProgress } = useScroll({
     target: researchRef,
@@ -59,33 +57,33 @@ const Anchor: React.FC<AnchorProps> = ({
         </a>
         <a href="#outline" className="flex item-center">
           <div className="flex flex-row justify-center">
-          <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-              <motion.polygon
-                points="0,100 0,0 100,50"
-                fill="none"
-                style={{
-                  strokeWidth: "10",
-                  pathLength: outlineScrollYProgress,
-                }}
-                className="triangle"
-              />
+            <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
+                <motion.polygon
+                  points="0,100 0,0 100,50"
+                  fill="none"
+                  style={{
+                    strokeWidth: "10",
+                    pathLength: outlineScrollYProgress,
+                  }}
+                  className="triangle"
+                />
             </svg>
             <span>outline</span>
           </div>   
         </a>
         <a href="#profile" className="flex item-center">
           <div className="flex flex-row justify-center">
-          <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-              <motion.polygon
-                points="0,100 0,0 100,50"
-                fill="none"
-                style={{
-                  strokeWidth: "10",
-                  pathLength: profileScrollYProgress,
-                }}
-                className="triangle"
-              />
-            </svg>
+            <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
+                <motion.polygon
+                  points="0,100 0,0 100,50"
+                  fill="none"
+                  style={{
+                    strokeWidth: "10",
+                    pathLength: profileScrollYProgress,
+                  }}
+                  className="triangle"
+                />
+              </svg>
             <span>profile</span>
           </div>
         </a>
