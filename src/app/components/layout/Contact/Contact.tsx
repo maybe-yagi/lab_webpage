@@ -3,27 +3,14 @@
 import { ContactProps } from "@/types/Contact.tytpes";
 import { useState } from "react";
 import MyButton from "../../elements/Button/Button";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { cardVariants } from "../../common/Animation";
 
 const Contact:React.FC<ContactProps> = ({contactRef}: ContactProps) => {
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 
-	const cardVariants: Variants = {
-		offscreen: {
-			y: 300
-		},
-		onscreen: {
-			y: 0,
-			rotate: 0,
-			transition: {
-				type: "spring",
-				bounce: 0.4,
-				duration: 0.8
-			}
-		}
-	};
 
 	const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();

@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { ProfileProps } from "@/types/Profile.types";
+import { motion } from "framer-motion";
+import { cardVariants } from "../../common/Animation";
 
 const Profile:React.FC<ProfileProps> = ({profileRef}:ProfileProps) => {
   return(
-    <div id="profile" className="my-5 flex w-5/12 flex-col gap-2 items-center" ref={profileRef}>
-      <div className="card w-full">
+    <motion.div id="profile" className="my-5 flex w-5/12 flex-col gap-2 items-center" ref={profileRef}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div className="card w-full" variants={cardVariants}>
         <div className="flex flex-nowrap items-center">
           <div className="mr-5">
             <Image alt="profile photo" src="/images/jeong.png" width={200} height={200} className="rounded-full"/>
@@ -28,8 +34,8 @@ const Profile:React.FC<ProfileProps> = ({profileRef}:ProfileProps) => {
             </div>
           </div>     
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

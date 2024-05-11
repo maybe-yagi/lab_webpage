@@ -7,6 +7,8 @@ import Image from "next/image";
 import ResearchCard from "@/app/components/elements/ResearchCard/ResearchCard";
 import MyButton from "../../elements/Button/Button";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+import { cardVariants } from "../../common/Animation";
 
 const Research:React.FC<ResearchProps> = ({researchRef}: ResearchProps) => {
   const router = useRouter();
@@ -15,8 +17,12 @@ const Research:React.FC<ResearchProps> = ({researchRef}: ResearchProps) => {
   }
 
   return (
-    <div id="research" className="flex w-5/12 flex-col gap-2" ref={researchRef}>
-      <div className="card">
+    <motion.div id="research" className="flex w-5/12 flex-col gap-2" ref={researchRef}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div className="card" variants={cardVariants}>
         <div className="text-2xl w-fit border-b-2 border-fuchsia-400 mb-4">
           <h2>Research</h2>
         </div>
@@ -36,8 +42,8 @@ const Research:React.FC<ResearchProps> = ({researchRef}: ResearchProps) => {
         <div className="flex justify-center items-center mt-4">
           <MyButton onClick={handleClick}>view more</MyButton>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
