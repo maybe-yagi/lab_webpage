@@ -39,8 +39,13 @@ body {
       0 6px 10px -4px rgba(14, 13, 26, 0.12) !important;
   border-radius: 16px;
   background-color: rgba(231, 229, 229, 0.6);
+  /* background-color: rgba(12, 12, 12, 0.6); */
 }
 
 h2 {
   font-weight: bold;
+}
+
+p {
+  color: rgb(180, 99, 163);
 }
