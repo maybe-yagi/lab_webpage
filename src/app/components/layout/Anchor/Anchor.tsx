@@ -25,7 +25,7 @@ const Anchor: React.FC<AnchorProps> = ({
   })
   const { scrollYProgress: researchScrollYProgress } = useScroll({
     target: researchRef,
-    offset: ['start end', 'end center'],
+    offset: ['start center', 'end center'],
   })
   const { scrollYProgress: activityScrollYProgress } = useScroll({
     target: activityRef,
@@ -58,15 +58,15 @@ const Anchor: React.FC<AnchorProps> = ({
         <a href="#outline" className="flex item-center">
           <div className="flex flex-row justify-center">
             <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-                <motion.polygon
-                  points="0,100 0,0 100,50"
-                  fill="none"
-                  style={{
-                    strokeWidth: "10",
-                    pathLength: outlineScrollYProgress,
-                  }}
-                  className="triangle"
-                />
+              <motion.polygon
+                points="0,100 0,0 100,50"
+                fill="none"
+                style={{
+                  strokeWidth: "10",
+                  pathLength: outlineScrollYProgress,
+                }}
+                className="triangle"
+              />
             </svg>
             <span>outline</span>
           </div>   
@@ -74,31 +74,31 @@ const Anchor: React.FC<AnchorProps> = ({
         <a href="#profile" className="flex item-center">
           <div className="flex flex-row justify-center">
             <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-                <motion.polygon
-                  points="0,100 0,0 100,50"
-                  fill="none"
-                  style={{
-                    strokeWidth: "10",
-                    pathLength: profileScrollYProgress,
-                  }}
-                  className="triangle"
-                />
-              </svg>
+              <motion.polygon
+                points="0,100 0,0 100,50"
+                fill="none"
+                style={{
+                  strokeWidth: "10",
+                  pathLength: profileScrollYProgress,
+                }}
+                className="triangle"
+              />
+            </svg>
             <span>profile</span>
           </div>
         </a>
         <a href="#research" className="flex item-center">
           <div className="flex flex-row justify-center">
             <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-                <motion.polygon
-                  points="0,100 0,0 100,50"
-                  fill="none"
-                  style={{
-                    strokeWidth: "10",
-                    pathLength: researchScrollYProgress,
-                  }}
-                  className="triangle"
-                />
+              <motion.polygon
+                points="0,100 0,0 100,50"
+                fill="none"
+                style={{
+                  strokeWidth: "10",
+                  pathLength: researchScrollYProgress,
+                }}
+                className="triangle"
+              />
             </svg>
             <span>research</span>
           </div>
@@ -106,15 +106,15 @@ const Anchor: React.FC<AnchorProps> = ({
         <a href="#activity" className="flex item-center">
           <div className="flex flex-row justify-center">
             <svg width="30" height="30" viewBox="0 0 100 100" className="mx-3">
-                  <motion.polygon
-                    points="0,100 0,0 100,50"
-                    fill="none"
-                    style={{
-                      strokeWidth: "10",
-                      pathLength: activityScrollYProgress,
-                    }}
-                    className="triangle"
-                  />
+              <motion.polygon
+                points="0,100 0,0 100,50"
+                fill="none"
+                style={{
+                  strokeWidth: "10",
+                  pathLength: activityScrollYProgress,
+                }}
+                className="triangle"
+              />
             </svg>
             <span>activity</span>
           </div>
